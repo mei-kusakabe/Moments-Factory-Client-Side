@@ -1,0 +1,12 @@
+.bg4-image {
+    height: 100vh;
+    min-height: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://c4.wallpaperflare.com/wallpaper/230/873/179/humor-rainbows-unicorns-clouds-wallpaper-preview.jpg');
+}
