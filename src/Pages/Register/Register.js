@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { FaCameraRetro, FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { AuthContext } from '../Contexts/AuthProvider';
 import useTitle from '../hooks/useTitle';
 import "./Register.css"
