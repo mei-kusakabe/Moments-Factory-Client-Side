@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import FourZeroFour from "../Pages/Others/FourZeroFour/FourZeroFour";
 
 import Register from "../Pages/Register/Register";
+import Services from "../Pages/Services/Services";
 
 
 export const routes = createBrowserRouter([
@@ -32,6 +33,9 @@ export const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            }, {
+                path: '/services',
+                element: <Services></Services>
             }
 
         ]
