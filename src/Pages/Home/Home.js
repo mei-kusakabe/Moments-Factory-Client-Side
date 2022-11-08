@@ -1,5 +1,6 @@
 import React from 'react';
 import useTitle from '../hooks/useTitle';
+import './Home.css'
 
 const Home = () => {
     useTitle('Home')
