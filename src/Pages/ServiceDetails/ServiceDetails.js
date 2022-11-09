@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import SingleReview from '../SingleReview/SingleReview';
+import './../SingleReview/SingleReview.css'
 
 const ServiceDetails = () => {
 
     const services = useLoaderData();
-    console.log(1);
-    console.log(services);
+    // const [reviews, setReviews] = useState([])
+    //console.log(1);
+    // console.log(services);
+    // http://localhost:5000/reviews?service_id=636aa61b63b0fbeabeff4c23
+
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/reviewsfactory/${services?._id}`)
+    //         .then(res => res.json())
+    //         .then(data => setReviews(data))
+    //         .then(data => console.log(data))
+    // }, [])
+
     return (
         <div>
             <h2 className="mx-auto my-5"> Service Section</h2>
@@ -16,6 +28,15 @@ const ServiceDetails = () => {
                     <p className="card-text">{services?.description}</p>
                     <p className="card-text"> <b>Service Charge: </b>{services?.price}</p>
                 </div>
+            </div>
+
+            <div>
+                <SingleReview></SingleReview>
+            </div>
+
+            <div>
+                <h2 className="text-4xl">Want to add review about {services?.title}? </h2>
+                <button className="button1 px-5  mx-3 fw-bold text-white my-2 border shadow"> <Link to={`/reviewPage/${services?._id}`}> <span className='fw-bold'>Add Review</span></Link></button>
             </div>
         </div >
 
