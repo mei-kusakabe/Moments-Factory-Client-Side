@@ -1,0 +1,43 @@
+.bg-image {
+    height: 100vh;
+    min-height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/green-wall-mockup-with-green-plant-shelf3d-rendering_41470-4114.jpg?w=1380&t=st=1667972118~exp=1667972718~hmac=cdebcdad1670133bccc0be1dec753b5b36e7031a281db1958bf60b78d375e866');
+}
+
+.header-section {
+    overflow-y: hidden;
+}
+
+.home-service {
+    background-color: #A9AF7E;
+}
+
+.button1,
+.button1:link,
+.button1:visited,
+.button1:hover,
+.button1:active {
+    color: white;
+    background: #557153;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .w-md-100 {
+        width: 100% !important;
+    }
+
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}

@@ -1,22 +1,58 @@
-.topic {
-    border: 1px solid lightblue;
+.service {
+    border: 1px solid #E6E5A3;
     border-radius: 5px;
     padding-bottom: 20px;
     overflow-x: hidden;
 
 }
 
-.topic img {
+.services {
+
+    background-color: #A9AF7E;
+}
+
+.service img {
     height: 250px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 
-.topic a {
+.service a {
     text-decoration: none;
 
 }
+
+.list a,
+.list {
+    text-decoration: none;
+    display: flex;
+
+}
+
+
+.button1,
+.button1:link,
+.button1:visited,
+.button1:hover,
+.button1:active {
+    color: white;
+    background: #557153;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a,
+a:visited {
+    color: #FFFF !important;
+}
+
+a:hover,
+a:active {
+    color: #FFFF !important;
+}
+
 
 
 /* .topic-container {
@@ -25,7 +61,7 @@
     gap: 15px;
 }*/
 
-.topic-all {
+.service-all {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 15px;
@@ -40,10 +76,14 @@
         gap: 45px;
     } */
 
-    .topic img {
+    .service img {
         height: 150px;
         width: 250px;
         background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .list {
+        display: inline-block;
     }
 }
 
@@ -56,7 +96,7 @@
         gap: 25px;
     } */
 
-    .topic img {
+    .service img {
         height: 150px;
         width: 350px;
         background-color: rgba(0, 0, 0, 0.7);
@@ -65,32 +105,40 @@
 
 /* for-small-devices*/
 @media screen and (max-width:768px) {
-    .topic-all {
+    .service-all {
         display: grid;
         grid-template-columns: repeat(1, 2fr) !important;
         gap: 15px;
     }
 
-    .topic img {
+    .service img {
         height: 200px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .list {
+        display: inline;
     }
 }
 
 /* for-tablet-devices */
 
 @media (min-width: 769px) and (max-width : 1200px) {
-    .topic-all {
+    .service-all {
         display: grid;
         grid-template-columns: repeat(2, 2fr) !important;
         gap: 25px;
     }
 
-    .topic img {
+    .service img {
         height: 350px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .list {
+        display: flex;
     }
 }
 
