@@ -1,7 +1,6 @@
 import React from 'react';
 import Blog from '../Blog/Blog';
 import useTitle from '../hooks/useTitle';
-import Services from '../Services/Services';
 import { Link } from 'react-router-dom';
 import './Home.css'
 import Gallery from '../Gallery/Gallery';

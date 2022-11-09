@@ -14,6 +14,16 @@ const Services = () => {
 
     return (
         <div className='services'>
+
+            <div className='p-2 list rounded  justify-content-center align-items-center service-page-list'>
+                {
+                    services.map((service, i) => <p key={service._id}>
+                        <button className="button1 px-5  mx-3 fw-bold text-white my-2 border shadow"> <Link to={`/services/${service._id}`}> <span className='fw-bold'>{i + 1}.</span>{service.title}</Link></button>
+                        {/* <Link to={`/services/${service._id}`}> <span className='fw-bold'>{i + 1}.</span>{service.title}</Link> */}
+                    </p>)
+                }
+
+            </div>
             <div >
                 <h2 className='fw-bold text-white pt-4'>All Services</h2>
 

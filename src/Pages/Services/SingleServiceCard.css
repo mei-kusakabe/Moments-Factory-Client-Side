@@ -30,6 +30,10 @@
 
 }
 
+.service-page-list {
+    flex-wrap: wrap;
+}
+
 
 .button1,
 .button1:link,

@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import FourZeroFour from "../Pages/Others/FourZeroFour/FourZeroFour";
 
 import Register from "../Pages/Register/Register";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services";
 
 
@@ -36,6 +37,11 @@ export const routes = createBrowserRouter([
             }, {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/services/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             }
 
         ]
