@@ -39,6 +39,10 @@ const Header = () => {
                                         user?.uid ?
                                             <>
                                                 <span className='fw-bold my-2 mx-2'>{user?.displayName}</span>
+                                                <button className="button1 px-3  mx-1 fw-bold text-white border shadow"> <Link to={`/orders`}> <span className='fw-bold'>My Reviews</span></Link></button>
+
+                                                {/* <button className="button1 px-3  mx-1 fw-bold text-white border shadow"> <Link to={`/myreviews/${user?.email}`}> <span className='fw-bold'>My Reviews</span></Link></button> */}
+                                                <button className="button1 px-3  mx-1 fw-bold text-white border shadow"> <Link to={`/AddService`}> <span className='fw-bold'>Add Service</span></Link></button>
 
                                                 {/* <FaArrowRight onClick={handleLogOut}></FaArrowRight> */}
                                                 <FaSignOutAlt className='fw-bold my-2 fs-4 mx-2' onClick={handleLogOut}></FaSignOutAlt>

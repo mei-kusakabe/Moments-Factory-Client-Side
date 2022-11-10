@@ -6,6 +6,7 @@ import { AuthContext } from '../Contexts/AuthProvider';
 import useTitle from '../hooks/useTitle';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle, FaEnvelope, FaLock } from "react-icons/fa";
+import './Login.css'
 
 const Login = () => {
 
@@ -83,7 +84,8 @@ const Login = () => {
                                     <Button onClick={handleGoogleSignIn} className='mb-2 fw-bold' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
                                 </ButtonGroup>
                             </div>
-                            <p className='mt-3'>Need an Account? <Link to="/register"> <span className='fw-bold'>Register</span></Link></p>
+                            <p className='mt-3'>Need an Account? </p>
+                            <Link to="/register"> <span className='fw-bold text-black'> Click here to Register</span></Link>
                         </div>
                     </Form>
                 </div>

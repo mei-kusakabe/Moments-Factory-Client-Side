@@ -80,20 +80,21 @@ const Register = () => {
                                     <input type="password" className="form-control" name="password" placeholder="Password" required />
                                 </div>
 
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                     <Form.Check
                                         type="checkbox"
                                         onClick={handleAccepted}
-                                        label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
-                                </Form.Group>
+                                        label={<>Accept <Link to="/terms" className='text-black fw-bold'>Terms and conditions</Link></>} />
+                                </Form.Group> disabled={!accepted}
+                                */}
 
-                                <Button variant="primary" className="btn-xl fw-bold" type="submit" disabled={!accepted}> Register</Button>
+                                <Button variant="primary" className="btn-xl fw-bold" type="submit" > Register</Button>
                                 <Form.Text className="text-danger">
                                     {error}
                                 </Form.Text>
                                 <hr />
 
-                                <p className='mt-3'>Already an User? <Link to="/login"> <span className='fw-bold'>Login</span></Link></p>
+                                <p className='mt-3'>Already an User? <Link to="/login"> <span className='fw-bold text-black'>Click here to Login</span></Link></p>
                             </div>
                         </Form>
                     </div>
