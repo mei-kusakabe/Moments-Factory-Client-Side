@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 import Gallery from '../Gallery/Gallery';
 import HomeServices from '../Services/HomeServices';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     useTitle('Home')
@@ -14,10 +15,10 @@ const Home = () => {
                 <div>
                     <div className="w-50 w-lg-50 w-md-100 w-sm-100 w-xs-100 ms-auto px-5 mx-5">
                         <div>
-                            <h1 className="mb-5 text-white fst-italic fw-bold">Moments Factory</h1>
-                            <h4 className="mb-3 fst-italic text-center text-white">"The way that light hits objects, I think, is one of the more important <br></br> things that sculpture and photography share."
+                            <h1 className="mb-5  name text-white fst-italic fw-bold">Moments Factory</h1>
+                            <h4 className="mb-3 text-header fst-italic text-center text-white">"The way that light hits objects, I think, is one of the more important <br></br> things that sculpture and photography share."
                                 ~ Rashid Johnson</h4>
-                            <a href="/services"> <button type="button" class="btn btn-outline-light fw-bold" >Go to Services</button></a>
+                            <a href="/services"> <button type="button" class=" home-btn btn btn-outline-light fw-bold" >Go to Services</button></a>
                         </div>
                     </div>
                 </div>
@@ -28,6 +29,10 @@ const Home = () => {
             </div>
             <div>
                 <Gallery></Gallery>
+            </div>
+
+            <div>
+                <Contact></Contact>
             </div>
             <div className='text-center'>
                 <Blog></Blog>

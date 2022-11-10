@@ -8,3 +8,32 @@ a {
 .nav-bg {
     background-color: #7D8F69
 }
+
+
+/* for-small-devices*/
+@media (min-width: 320px) and (max-width : 768px) {
+
+    .nav {
+        overflow-y: hidden;
+    }
+
+    nav img {
+        height: 11px;
+        width: 32px;
+        margin: auto;
+    }
+
+    .sign-out {
+        margin: auto;
+    }
+}
+
+/* for-tablet-devices */
+
+@media (min-width: 769px) and (max-width : 1200px) {
+
+    nav img {
+        height: 20px;
+        width: 32px;
+    }
+}

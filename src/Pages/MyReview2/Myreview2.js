@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Contexts/AuthProvider';
 import MyReviewRow from './MyReviewRow';
+import useTitle from '../hooks/useTitle';
 
 const Myreview2 = () => {
+    useTitle('My Reviews')
 
     const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([])
@@ -23,9 +25,7 @@ const Myreview2 = () => {
                 setOrders(data);
             })
     }, [user?.email, logOut])
-    //         .then(res => res.json())
-    //         .then(data => setOrders(data))
-    // }, [user?.email])
+
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this review?');
@@ -48,28 +48,59 @@ const Myreview2 = () => {
         }
     }
 
-    const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('moment-token')}`
-            },
-            body: JSON.stringify({ status: 'Approved' })
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    const remaining = orders.filter(odr => odr._id !== id);
-                    const approving = orders.find(odr => odr._id === id);
-                    approving.status = 'Approved'
 
-                    const newOrders = [approving, ...remaining];
-                    setOrders(newOrders);
-                }
-            })
-    }
+    // const handleUpdate = id => {
+    //     fetch(`http://localhost:5000/orders/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json',
+    //             authorization: `Bearer ${localStorage.getItem('moment-token')}`
+    //         },
+    //         body: JSON.stringify({ status: 'Approved', message: { message } })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             if (data.modifiedCount > 0) {
+    //                 const remaining = orders.filter(odr => odr._id !== id);
+    //                 const approving = orders.find(odr => odr._id === id);
+    //                 approving.status = 'Approved'
+
+    //                 const newOrders = [approving, ...remaining];
+    //                 setOrders(newOrders);
+    //             }
+    //         })
+    // }
+
+
+    // const handleUpdate = event => {
+    //     event.preventDefault();
+    //     // console.log(user);
+    //     fetch(`http://localhost:5000/orders/${_id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json',
+    //             authorization: `Bearer ${localStorage.getItem('moment-token')}`
+    //         },
+    //         body: JSON.stringify(orders)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.modifiedCount > 0) {
+    //                 alert('Review updated')
+    //                 console.log(data);
+    //             }
+
+    //         })
+    // }
+
+    // const handleUpdateChange = event => {
+    //     const field = event.target.name;
+    //     const value = event.target.value;
+    //     const newOrder = { ...orders }
+    //     newOrder[field] = value;
+    //     setOrders(newOrder);
+    // }
 
     const len = orders.length;
 
@@ -96,7 +127,8 @@ const Myreview2 = () => {
                                     key={order._id}
                                     order={order}
                                     handleDelete={handleDelete}
-                                    handleStatusUpdate={handleStatusUpdate}
+                                // handleStatusUpdate={handleUpdate}
+                                // handleUpdateChange={handleUpdateChange}
                                 ></MyReviewRow>)
                             }
                         </tbody>

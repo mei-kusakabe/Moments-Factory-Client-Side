@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import SingleReview from '../SingleReview/SingleReview';
 import './../SingleReview/SingleReview.css'
+import useTitle from '../hooks/useTitle';
 
 const ServiceDetails = () => {
+    useTitle("Service Details")
 
     const services = useLoaderData();
     // const [reviews, setReviews] = useState([])

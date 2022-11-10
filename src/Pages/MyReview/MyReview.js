@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
+import useTitle from '../hooks/useTitle';
 const MyReview = ({ params }) => {
+    useTitle('My Review')
 
     const myreviews = useLoaderData();
     console.log(myreviews);

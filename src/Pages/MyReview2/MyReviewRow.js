@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
-const MyReviewRow = ({ order, handleDelete, handleStatusUpdate }) => {
+import { Link, useLoaderData } from 'react-router-dom';
+const MyReviewRow = ({ order, handleDelete, handleUpdate, handleUpdateChange }) => {
 
     const { _id, serviceName, customerName, message } = order;
     const [orderService, setOrderService] = useState({})
@@ -10,12 +10,11 @@ const MyReviewRow = ({ order, handleDelete, handleStatusUpdate }) => {
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [_id])
+
     return (
         <tr>
             <th>
-                <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
-                </label>
+
             </th>
             <td>
                 <div className="flex items-center space-x-3">
@@ -28,20 +27,28 @@ const MyReviewRow = ({ order, handleDelete, handleStatusUpdate }) => {
                     </div>
                     <div>
                         <div className="font-bold">{customerName}</div>
-                        {/* <div className="font-bold">{serviceName}</div> */}
+
                     </div>
                 </div>
             </td>
             <td>
                 {serviceName}
                 <br />
-                {/* <span className="badge badge-ghost badge-sm">${message}</span> */}
+
             </td>
             <td>{message}</td>
             <th>
-                <button
-                    onClick={() => handleStatusUpdate(_id)}
-                    className="btn btn-info"></button>
+
+                <Link to={`/update/${_id}`}>
+                    <button className='btn btn-info border'>
+                        update
+                    </button>
+                    <label>
+                        &nbsp;
+                        <button onClick={() => handleDelete(_id)} className='btn btn-info border'>Delete</button>
+                    </label>
+                </Link>
+
             </th>
         </tr>
     );

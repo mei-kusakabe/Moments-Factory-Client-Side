@@ -23,7 +23,7 @@ const Header = () => {
                     <div>
                         <span>
                             <img src="https://cdn-icons-png.flaticon.com/512/1042/1042339.png" alt="Logo" width="50" height="35" className="d-inline-block align-text-top" />
-                            <Navbar.Brand href="/home" className='fw-bold text-white mt-5'>Moment's Factory</Navbar.Brand>
+                            <Navbar.Brand href="/home" className='fw-bold text-white mt-5 title'>Moment's Factory</Navbar.Brand>
                         </span>
                     </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -33,6 +33,9 @@ const Header = () => {
                             <Nav.Link href="/services" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Services</Nav.Link>
                             {/* <Nav.Link href="/review" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Review</Nav.Link> */}
                             <Nav.Link href="/blog" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Blog</Nav.Link>
+                            <Nav.Link href="/photogallery" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Photo Gallery</Nav.Link>
+                            <Nav.Link href="/contact" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Contact</Nav.Link>
+
                             <Nav>
                                 <>
                                     {
@@ -41,14 +44,12 @@ const Header = () => {
                                                 <span className='fw-bold my-2 mx-2'>{user?.displayName}</span>
 
                                                 <Nav.Link href="/orders" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>My Review</Nav.Link>
-                                                {/* <button className="button1  px-5 py-1 mx-1  text-white border shadow"> <Link to={`/orders`} style={{ textDecoration: 'none' }}> <span className='fw-bold'>My Reviews</span></Link></button> */}
 
-                                                {/* <button className="button1 px-3  mx-1 fw-bold text-white border shadow"> <Link to={`/myreviews/${user?.email}`}> <span className='fw-bold'>My Reviews</span></Link></button> */}
                                                 {/* <button className="button1 px-5 py-1 mx-1   text-white border shadow"> <Link to={`/AddService`} style={{ textDecoration: 'none' }}> <span className='fw-bold'>Add Service</span></Link></button> */}
                                                 <Nav.Link href="/AddService" className='pe-2 text-white fw-bold' style={{ textDecoration: 'underline', textDecorationColor: "white" }}>Add Service</Nav.Link>
 
                                                 {/* <FaArrowRight onClick={handleLogOut}></FaArrowRight> */}
-                                                <FaSignOutAlt className='fw-bold my-2 fs-4 mx-2' onClick={handleLogOut}></FaSignOutAlt>
+                                                <FaSignOutAlt className='sign-out fw-bold my-2 fs-4 mx-2' onClick={handleLogOut}></FaSignOutAlt>
 
                                                 {/* <Button variant="light" onClick={handleLogOut}>Log out</Button> */}
                                             </>
