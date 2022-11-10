@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+### `Project Name : Moment Factory`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Live Website Link: ` [https://moments-factory.web.app](https://moments-factory.web.app)
+### `Project Description: `
 
-## Available Scripts
+Assalamu 'alaikum,
 
-In the project directory, you can run:
+    1.This project is a simple React web application with Authentication for photography . 
+    2.Different Services are available for customer.The service details route is dynamic.
+    3.Here, By clicking the "Add Review" button, anyone can add his/her own reviews.
+    4.Users must register in order to add review because access is restricted without authentication. Additionally, we have made the my review and add service route      which are private and dynamic that is only accessible to users who have authenticated.
+    5.We have registration page for new users.
+    6.Also Reguler users, there is a login page to log in.
+    7.Few important questions are available in the blog page.
+    8.In My Review page, One authenticated users personal reviews are available.He/She can edit or delete this through a route and button icon.
+    9.We have use Firebase Authentication system here.
+    10.Vanilla CSS,Bootstrap and React-Bootstrap all are used to design the site.
+    11.We have deployed the client site on firebase.
+    12.404 route has also been declared. 
+    13.Every page was responsive and accurately routed.
+    14.We have used Mongodb database for storing data.
+    15.In this project, photos are clickable and it shows the full screen whenever clicked.
+    16.For this project, we have used Firebase, React frameworks etc.
 
-### `npm start`
+     Live Website Link: https://moments-factory.web.app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
