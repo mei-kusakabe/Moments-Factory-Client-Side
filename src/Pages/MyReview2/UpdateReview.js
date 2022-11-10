@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 const UpdateReview = ({ params }) => {
 
     const update = useLoaderData();

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { FaCameraRetro, FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Contexts/AuthProvider';
@@ -8,10 +8,12 @@ import "./Register.css"
 const Register = () => {
     useTitle('Register')
     const [error, setError] = useState('');
-    const [accepted, setAccepted] = useState(false);
-    const { createUser, updateUserProfile, setUser } = useContext(AuthContext);
+    // const [accepted, setAccepted] = useState(false);
+    const { createUser, updateUserProfile, setUser, loading } = useContext(AuthContext);
 
-
+    if (loading) {
+        return <Spinner animation='border' variant='primary' />
+    }
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -47,9 +49,9 @@ const Register = () => {
             .catch(error => console.error(error));
     }
 
-    const handleAccepted = event => {
-        setAccepted(event.target.checked)
-    }
+    // const handleAccepted = event => {
+    //     setAccepted(event.target.checked)
+    // }
 
     return (
 

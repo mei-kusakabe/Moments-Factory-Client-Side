@@ -1,15 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SingleServiceCard from './SingleServiceCard';
 import './SingleServiceCard.css'
 import { Link } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
+import { AuthContext } from '../Contexts/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const Services = () => {
+    useTitle('Services')
     const [services, setServices] = useState([]);
+    const { loading } = useContext(AuthContext);
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
+
+    if (loading) {
+        return <Spinner animation='border' variant='primary' />
+    }
 
 
     return (

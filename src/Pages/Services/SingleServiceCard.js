@@ -19,7 +19,7 @@ const SingleServiceCard = ({ service }) => {
                 </PhotoView>
             </PhotoProvider>
             <h5 className='p-3 w-100'>Title: {service?.title} </h5>
-            <p className='p-3 text-truncate'>  {service?.description}</p>
+            <p className='p-3 text '>  {service?.description}</p>
             <h4> Price: {service?.price}</h4>
 
             <button className="button1 px-5  mx-3 fw-bold text-white my-2 border shadow"><Link to={`/services/${service?._id}`}>View Details</Link></button>
@@ -27,5 +27,7 @@ const SingleServiceCard = ({ service }) => {
 
     );
 };
+
+// text-truncate
 
 export default SingleServiceCard;

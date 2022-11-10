@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import SingleReview from '../SingleReview/SingleReview';
 import './../SingleReview/SingleReview.css'
