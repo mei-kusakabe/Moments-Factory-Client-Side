@@ -64,17 +64,13 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/orders',
-                element: <Myreview2></Myreview2>
+                element: <PrivateRoute><Myreview2></Myreview2></PrivateRoute>
             },
             {
                 path: '/Addservice',
                 element: <PrivateRoute><AddService></AddService></PrivateRoute>
-            },
-            // {
-            //     path: '/reviewsfactory/:id',
-            //     element: <SingleReview></SingleReview>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/reviewsfactory/${params.id}`)
-            // }
+            }
+
 
         ]
 

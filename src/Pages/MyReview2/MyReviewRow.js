@@ -28,7 +28,7 @@ const MyReviewRow = ({ order, handleDelete, handleStatusUpdate }) => {
                     </div>
                     <div>
                         <div className="font-bold">{customerName}</div>
-                        <div className="font-bold">{serviceName}</div>
+                        {/* <div className="font-bold">{serviceName}</div> */}
                     </div>
                 </div>
             </td>

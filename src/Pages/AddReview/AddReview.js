@@ -24,13 +24,6 @@ const AddReview = () => {
             message
         }
 
-        // if(phone.length > 10){
-        //     alert('Phone number should be 10 characters or longer')
-        // }
-        // else{
-
-        // }
-
         fetch('http://localhost:5000/reviewsfactory', {
             method: 'POST',
             headers: {
