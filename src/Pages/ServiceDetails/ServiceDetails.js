@@ -11,10 +11,10 @@ const ServiceDetails = () => {
     // const [reviews, setReviews] = useState([])
     //console.log(1);
     // console.log(services);
-    // http://localhost:5000/reviews?service_id=636aa61b63b0fbeabeff4c23
+    // https://moment-factory.vercel.app/reviews?service_id=636aa61b63b0fbeabeff4c23
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/reviewsfactory/${services?._id}`)
+    //     fetch(`https://moment-factory.vercel.app/reviewsfactory/${services?._id}`)
     //         .then(res => res.json())
     //         .then(data => setReviews(data))
     //         .then(data => console.log(data))

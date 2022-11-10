@@ -10,7 +10,7 @@ const Myreview2 = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        fetch(`https://moment-factory.vercel.app/orders?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('moment-token')}`
             }
@@ -30,7 +30,7 @@ const Myreview2 = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this review?');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://moment-factory.vercel.app/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('moment-token')}`
@@ -50,7 +50,7 @@ const Myreview2 = () => {
 
 
     // const handleUpdate = id => {
-    //     fetch(`http://localhost:5000/orders/${id}`, {
+    //     fetch(`https://moment-factory.vercel.app/orders/${id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json',
@@ -76,7 +76,7 @@ const Myreview2 = () => {
     // const handleUpdate = event => {
     //     event.preventDefault();
     //     // console.log(user);
-    //     fetch(`http://localhost:5000/orders/${_id}`, {
+    //     fetch(`https://moment-factory.vercel.app/orders/${_id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json',

@@ -57,20 +57,20 @@ export const routes = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://moment-factory.vercel.app/services/${params.id}`)
             },
             {
                 path: '/reviewPage/:id',
                 element: <PrivateRoute><AddReview></AddReview></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://moment-factory.vercel.app/services/${params.id}`)
             },
 
             {
                 path: '/myreviews/:email',
                 // path: '/reviewsfactory/:email',
                 element: <PrivateRoute><MyReview></MyReview></PrivateRoute>,
-                // loader: ({ params }) => fetch(`http://localhost:5000/reviewsfactory?email=${params.email}`)
-                loader: ({ params }) => fetch(`http://localhost:5000/myreviews?email=${params.email}`)
+                // loader: ({ params }) => fetch(`https://moment-factory.vercel.app/reviewsfactory?email=${params.email}`)
+                loader: ({ params }) => fetch(`https://moment-factory.vercel.app/myreviews?email=${params.email}`)
             },
 
             {
@@ -80,7 +80,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/update/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/reviewsfactory/${params.id}`)
+                    return fetch(`https://moment-factory.vercel.app/reviewsfactory/${params.id}`)
 
                 },
                 element: <UpdateReview></UpdateReview>

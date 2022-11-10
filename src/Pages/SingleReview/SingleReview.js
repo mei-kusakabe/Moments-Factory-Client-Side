@@ -12,7 +12,7 @@ const SingleReview = () => {
     // console.log(services);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviewsfactory?service_id=${services?._id}`)
+        fetch(`https://moment-factory.vercel.app/reviewsfactory?service_id=${services?._id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
         //.then(data => console.log(data))

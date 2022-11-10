@@ -12,7 +12,7 @@ const MyReview = ({ params }) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myreviews`)
+        fetch(`https://moment-factory.vercel.app/myreviews`)
             .then(res => res.json())
             .then(data => setReviews(data))
             .then(data => console.log(data))
@@ -25,7 +25,7 @@ const MyReview = ({ params }) => {
     // // console.log(services);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/myreviews?email=${reviews?.email}`)
+    //     fetch(`https://moment-factory.vercel.app/myreviews?email=${reviews?.email}`)
     //         .then(res => res.json())
     //         .then(data => setmyReviews(data))
     //         .then(data => console.log(data))
@@ -39,7 +39,7 @@ const MyReview = ({ params }) => {
     const handleDelete = email => {
         const proceed = window.confirm('Are you sure, you want to delete this review');
         if (proceed) {
-            fetch(`http://localhost:5000/myreviews/${email}`, {
+            fetch(`https://moment-factory.vercel.app/myreviews/${email}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -55,7 +55,7 @@ const MyReview = ({ params }) => {
     }
 
     const handleStatusUpdate = email => {
-        fetch(`http://localhost:5000/reviewsfactory?email=${myreviews.email}`, {
+        fetch(`https://moment-factory.vercel.app/reviewsfactory?email=${myreviews.email}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

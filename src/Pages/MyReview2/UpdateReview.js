@@ -17,7 +17,7 @@ const UpdateReview = ({ params }) => {
     const handleUpdateReview = event => {
         event.preventDefault();
         console.log(review);
-        fetch(`http://localhost:5000/orders/${update._id}`, {
+        fetch(`https://moment-factory.vercel.app/orders/${update._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

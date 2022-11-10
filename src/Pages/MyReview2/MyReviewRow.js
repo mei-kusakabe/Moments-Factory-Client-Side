@@ -6,7 +6,7 @@ const MyReviewRow = ({ order, handleDelete, handleUpdate, handleUpdateChange }) 
     const [orderService, setOrderService] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${_id}`)
+        fetch(`https://moment-factory.vercel.app/services/${_id}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [_id])

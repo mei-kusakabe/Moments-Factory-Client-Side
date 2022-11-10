@@ -24,7 +24,7 @@ const AddReview = () => {
             message
         }
 
-        fetch('http://localhost:5000/reviewsfactory', {
+        fetch('https://moment-factory.vercel.app/reviewsfactory', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
